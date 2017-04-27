@@ -20,6 +20,9 @@
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/solarized-light.css">
 
+		<!-- custom css -->
+		<link rel="stylesheet" href="./css/styles.css" media="screen" title="no title" charset="utf-8">
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -35,7 +38,9 @@
 	</head>
 
 	<body>
-
+		<header>
+			<a href="#">Java/Controlling Execution</a>
+		</header>
 		<div class="reveal">
 			<div class="slides">
 				<section><!------------------------------------slide---------------------------------------------->
@@ -60,12 +65,12 @@
 						<p>
 							<pre><code data-trim>
 	if(Boolean-expression)
-  statement                    
+  statement
 
-or            
+or
 
 if(Boolean-expression)
-  statement                    
+  statement
 else
   statement
 		      				</code></pre>
@@ -101,10 +106,10 @@ while(Boolean-expression)
 						<h3>do-while</h3>
 						<p>
 							<pre><code data-trim>
-do statement            
+do statement
 	while(Boolean-expression);
 							</code></pre>
-							The sole difference between <b>while</b> and <b>do-while</b> is that the statement of the <b>do-while</b> always executes at least once, even if the expression evaluates to <b>false</b> the first time. 
+							The sole difference between <b>while</b> and <b>do-while</b> is that the statement of the <b>do-while</b> always executes at least once, even if the expression evaluates to <b>false</b> the first time.
 						</p>
 					</section>
 
@@ -127,7 +132,7 @@ for(initialization; Boolean-expression; step)
 							In both the initialization and step portions of the control expression, you can have a number of statements separated by commas, and those statements will be evaluated sequentially.
 							<pre><code data-trim>
 for(int i = 1, j = i + 10; i < 5; i++, j = i * 2) {
-      System.out.println("i = " + i + " j = " + j);                    
+      System.out.println("i = " + i + " j = " + j);
 }
 							</code></pre>
 						</p>
@@ -202,7 +207,7 @@ label1:
 				<section><!------------------------------------slide---------------------------------------------->
 					<h2>switch</h2>
 					<p>
-						The switch is sometimes called a selection statement. The switch statement selects from among pieces of code based on the value of an integral expression. 
+						The switch is sometimes called a selection statement. The switch statement selects from among pieces of code based on the value of an integral expression.
 						<pre><code data-trim>
 switch(integral-selector) {
   case integral-value1 : statement; break;
@@ -211,7 +216,7 @@ switch(integral-selector) {
   case integral-value4 : statement; break;
   case integral-value5 : statement; break;
   // ...
-  default: statement;                    
+  default: statement;
 }
 						</code></pre>
 					</p>
