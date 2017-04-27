@@ -619,6 +619,10 @@ PrintWriter out = new PrintWriter("myfile.txt", "UTF-8");
 If the  le does not exist, it is created.
 
 -
+
+String dir = System.getProperty("user.dir");
+
+-
 -
 
 ##Control Flow
