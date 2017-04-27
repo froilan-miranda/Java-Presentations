@@ -4,6 +4,7 @@
 -
 
 ## A Simple Java Program
+
 ```
 public class FirstSample {
     public static void main(String[] args) {
@@ -33,6 +34,7 @@ public class ClassName {
 -
 
 ##Comments
+
 Java has three ways of marking comments:
 
 1. `//` for single line comment
@@ -59,6 +61,7 @@ public class FirstSample {
 -
 
 ##Data Types
+
 Java is a strongly typed language and every variable must have a declared type.
 
 -
@@ -77,6 +80,7 @@ There are eight primitive types in Java:
 -
 
 ###Integer Types
+
 The integer types are for numbers without fractional parts.
 
 | Type  | Storage requirments | Range (Inclusive)                                       |
@@ -89,6 +93,7 @@ The integer types are for numbers without fractional parts.
 -
 
 ###Floating-Point Types
+
 The foating-point types denote numbers with fractional parts
 
 | Type   | Storage requirments | Range (Inclusive)                                              |
@@ -99,6 +104,7 @@ The foating-point types denote numbers with fractional parts
 -
 
 ###The char Type
+
 Literal values of type char are enclosed in single quotes.
 
 Values of type char can be expressed as hexadecimal values that run from \u0000 to \uFFFF
@@ -118,12 +124,14 @@ Values of type char can be expressed as hexadecimal values that run from \u0000 
 -
 
 ###The boolean Type
+
 The boolean type has two values, false and true.
 
 -
 -
 
 ##Variables
+
 In Java, every variable has a type. You declare a variable by placing the type  rst, followed by the name of the variable.
 
 ```
@@ -146,6 +154,7 @@ int i, j; // both are integers
 -
 
 ###Initializing Variables
+
 After you declare a variable, you must explicitly initialize it by means of an as- signment statement—you can never use the value of an uninitialized variable.
 
 ```
@@ -172,6 +181,7 @@ int vacationDays = 12;
 -
 
 ###Constants
+
 The keyword final indicates that you can assign to the variable once, and then its
 value is set once and for all. Also known as a constant.
 
@@ -206,6 +216,7 @@ public class Constants2 {
 -
 
 ##Operators
+
 The usual arithmetic operators
 
 | Operators       | Arithmetic     |
@@ -222,6 +233,7 @@ The / operator denotes integer division if both arguments are integers, and  foa
 -
 
 ###Mathematical Functions and Constants
+
 The Math class contains an assortment of mathematical functions that you may occasionally need
 
 ```
@@ -246,6 +258,7 @@ The Math class supplies the usual trigonometric functions:
 -
 
 ###Conversions between Numeric Types
+
 19 specific conversions on primitive types are called the widening primitive conversions:
 
 - byte to short, int, long, float, or double
@@ -267,6 +280,7 @@ float f = n; // f is 1.23456792E8
 -
 
 ###Casts
+
 When two values are combined with a binary operator (such as n + f where n is an integer and f is a  oating-point value), both operands are converted to a common type before the operation is carried out.
 
 - If either of the operands is of type double, the other one will be converted to a double.
@@ -290,11 +304,13 @@ int nx = (int) Math.round(x);
 -
 
 ###Combining Assignment with Operators
+
 `x+=4;` is equivalent to `x=x+4;`
 
 -
 
 ###Increment and Decrement Operators
+
 n++ adds 1 to the current value of the variable n, and n-- subtracts 1 from it
 
 ```
@@ -314,6 +330,7 @@ int b = 2 * n++; // now b is 14, n is 8
 -
 
 ###Relational and boolean Operators
+
 To test for equality, use a
 double equal sign, ==.
 
@@ -345,7 +362,7 @@ The exclamation point ! is the logical negation operator.
 
 The && and || operators are evaluated in “short circuit” fashion
 
-The second argument is not evaluated if the  rst argument already determines the value
+The second argument is not evaluated if the first argument already determines the value
 
 `expression1 && expression2`
 
@@ -353,7 +370,7 @@ The second argument is not evaluated if the  rst argument already determines the
 
 -
 
-The value of expression1 || expression2 is automatically true if the  rst
+The value of expression1 || expression2 is automatically true if the  first
 expression is true, without evaluating the second expression.
 
 -
@@ -371,6 +388,7 @@ x < y ? x : y //gives the smaller of x and y
 -
 
 ###Bitwise Operators
+
 & ("and") | ("or") ^ ("xor") ~ ("not")
 
 \>> and << operators which shift a bit pattern to the right or left.
@@ -381,6 +399,7 @@ bit into the top bits. There is no <<< operator.
 -
 
 ###Parentheses and Operator Hierarchy
+
 [Java order of operations](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
 
 `a && b || c`
@@ -400,6 +419,7 @@ means
 -
 
 ###Enumerated Types
+
 You can define your own enumerated type
 
 `enum Size { SMALL, MEDIUM, LARGE, EXTRA_LARGE };`
@@ -412,6 +432,7 @@ Now you can declare variables of this type:
 -
 
 ##Strings
+
 Java does not have a built-in string type. Instead, the standard Java library contains a pre- defined class called String.
 
 ```
@@ -422,6 +443,7 @@ String greeting = "Hello";
 -
 
 ###Substrings
+
 You can extract a substring from a larger string with the substring method of the String class.
 
 ```
@@ -434,6 +456,7 @@ The second parameter of substring is the  rst position that you do not want to c
 -
 
 ###Concatenation
+
 Use + to join (concatenate) two strings.
 
 ```
@@ -459,6 +482,7 @@ String all = String.join(" / ", "S", "M", "L", "XL"); // all is the string "S / 
 -
 
 ###Strings Are Immutable
+
 The String class gives no methods that let you change a character in an existing string.
 
 ```
@@ -470,6 +494,7 @@ Since you cannot change the individual characters in a Java string, the documen-
 -
 
 ###Testing Strings for Equality
+
 To test whether two strings are equal, use the equals method.
 
 ```
@@ -485,6 +510,7 @@ Do not use the == operator to test whether two strings are equal
 -
 
 ###Empty and Null Strings
+
 The empty string "" is a string of length 0.
 
 `if (str.length() == 0)`
@@ -513,6 +539,7 @@ if (str != null && str.length() != 0)
 -
 
 ###Building Strings
+
 Using the StringBuilder class allows you to build a string from many small pieces.
 
 ```
@@ -532,6 +559,7 @@ String completedString = builder.toString();
 -
 
 ###Reading Input
+
 To read console input, you  rst construct a Scanner that is attached to System.in
 
 ```
@@ -556,6 +584,7 @@ Similarly, the nextDouble method reads the next  oating-point number.
 -
 
 ###Formatting Output
+
 You can print a number x to the console with the statement System.out.print(x). That command will print x with the maximum number of nonzero digits for that type.
 
 ```
@@ -601,6 +630,7 @@ String message = String.format("Hello, %s. Next year, you'll be %d", name, age);
 -
 
 ###File Input and Output
+
 To read from a  le, construct a Scanner object
 
 ```
@@ -670,6 +700,7 @@ public static void main(String[] args)
 -
 
 ###Conditional Statements
+
 The conditional statement in Java has the form
 
 ```
@@ -718,6 +749,7 @@ else
 -
 
 ###Loops
+
 The while loop executes a statement (which may be a block statement) while a condition is true
 
 ```
@@ -735,6 +767,7 @@ do statement while (condition);
 -
 
 ###Determinate Loops
+
 The for loop is a general construct to support iteration controlled by a counter or similar variable that is updated after every iteration.
 
 ```
@@ -745,6 +778,7 @@ for (int i = 1; i <= 10; i++)
 -
 
 ###Multiple Selections—The switch Statement
+
 ```
 switch (choice)
 {
@@ -774,6 +808,7 @@ A case label can be
 -
 
 ###Statements That Break Control Flow
+
 The same break statement that you use to exit a switch can also be used to break out of a loop
 
 ```
@@ -803,6 +838,7 @@ while (sum < goal)
 -
 
 ##Big Numbers
+
 If the precision of the basic integer and  oating-point types is not suf cient, you can turn to a couple of handy classes in the java.math package: BigInteger and BigDecimal.
 
 ```
@@ -822,6 +858,7 @@ BigInteger d = c.multiply(b.add(BigInteger.valueOf(2))); // d = c * (b + 2)
 -
 
 ##Arrays
+
 An array is a data structure that stores a collection of values of the same type. You access each individual value through an integer index.
 
 -
@@ -854,6 +891,7 @@ Once you create an array, you cannot change its size
 -
 
 ###The “for each” Loop
+
 The enhanced for loop
 
 ```
@@ -867,6 +905,7 @@ for (int element : a) System.out.println(element);
 ```
 
 ###Array Initializers and Anonymous Arrays
+
 shortcut for creating an array object and supplying initial values at the same time
 
 ```
@@ -887,7 +926,9 @@ smallPrimes = new int[] { 17, 19, 23, 29, 31, 37 };
 //is shorthand for
 int[] anonymous = { 17, 19, 23, 29, 31, 37 }; smallPrimes = anonymous;
 ```
+
 ###Array Copying
+
 You can copy one array variable into another, but then both variables refer to the same array:
 
 ```
@@ -910,6 +951,7 @@ int[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length);
 -
 
 ###Array Sorting
+
 To sort an array of numbers, you can use one of the sort methods in the Arrays class:
 
 ```
@@ -925,6 +967,7 @@ This method uses a tuned version of the QuickSort algorithm that is claimed to b
 -
 
 ###Multidimensional Arrays
+
 Multidimensional arrays use more than one index to access array elements
 
 Declaring a two-dimensional array in Java
